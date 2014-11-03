@@ -9,7 +9,7 @@ var (
 	rg *rand.Rand = rand.New(rand.NewSource(time.Now().UnixNano()))
 )
 
-func generateISBN10List(num int) []string {
+func GenerateISBN10List(num int) []string {
 	strLi := make([]string, num)
 	for i := 0; i < num; i++ {
 		strLi[i] = GenerateISBN10()
@@ -40,7 +40,7 @@ func GenerateISBN10() string {
 }
 
 // Generates a bunch of ISBN13
-func generateISBN13List(num int) []string {
+func GenerateISBN13List(num int) []string {
 	strLst := make([]string, num)
 
 	for i := 0; i < num; i++ {
@@ -50,7 +50,7 @@ func generateISBN13List(num int) []string {
 	return strLst
 }
 
-func generateISBN13() string {
+func GenerateISBN13() string {
 	bites := make([]byte, 13)
 	var sum uint32 = 0
 	var i uint32 = 0
